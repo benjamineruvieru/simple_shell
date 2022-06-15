@@ -48,7 +48,7 @@ char *error_get_cd(data_shell *datash)
 	int length, len_id;
 	char *error, *ver_str, *msg;
 
-	ver_str = aux_iota(datash->counter);
+	ver_str = aux_itoa(datash->counter);
 	if (datash->args [1] [0] == '-')
 	{
 		msg = ": Illegal option ";
