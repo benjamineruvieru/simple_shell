@@ -179,7 +179,7 @@ int cmd_exec(data_shell *datash)
 			return (1);
 	}
 
-	pd = fork ();
+	pd = fork();
 	if (pd == 0)
 	{
 		if (exec == 0)
