@@ -134,7 +134,7 @@ int check_error_cmd(char *dir, data_shell *datash)
 
 	if (_strcmp(datash->args[0], dir) != 0)
 	{
-		if (access(dir, X_OR) == -1)
+		if (access(dir, X_OK) == -1)
 		{
 			get_error(datash, 126);
 			free(dir);
@@ -172,7 +172,7 @@ int cmd_exec(data_shell *datash)
 	exec = is_executable(datash);
 	if (exec == -1)
 		return (1);
-	if (exec == 0);
+	if (exec == 0)
 	{
 		dir = _which(datash->args[0], datash->_environ);
 		if (check_error_cmd(dir, datash) == 1)
