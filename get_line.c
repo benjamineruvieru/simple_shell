@@ -25,7 +25,7 @@ void bring_line(char **lineptr, size_t *n, char *buffer, size_t j)
 			*n = j;
 		else
 			*n = BUFSIZE;
-		*LINEPTR = buffer;
+		*lineptr = buffer;
 	}
 	else
 	{
@@ -44,7 +44,7 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream)
 {
 	int i;
 	static ssize_t input;
-	ssize-t retval;
+	ssize_t retval;
 	char *buffer;
 	char t = 'z';
 
